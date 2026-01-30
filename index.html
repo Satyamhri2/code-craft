@@ -1,228 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Code Craft – Crafting Digital Experiences</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Basic SEO -->
-    <meta name="description" content="The Code Craft helps businesses with WordPress development, website care, speed & security, CRM automation and custom websites." />
-    <meta name="keywords" content="WordPress Development, Website Care, Speed Optimization, CRM Automation, Custom Websites" />
-    <meta name="author" content="The Code Craft" />
+  <title>The Code Craft – Crafting Digital Experiences</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
+  <!-- SEO -->
+  <meta name="description" content="The Code Craft builds high-performance websites, optimized for speed, security and business growth." />
+  <meta name="keywords" content="The Code Craft, Web Development, WordPress, Speed Optimization, Digital Agency" />
+  <meta name="author" content="The Code Craft" />
+  <meta name="robots" content="index, follow" />
 
-        header {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
-            padding: 80px 20px;
-            text-align: center;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        header h1 {
-            margin-bottom: 10px;
-            font-size: 3rem;
-            font-weight: 800;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        header p {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
+    /* HERO */
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px;
+    }
 
-        header span {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
 
-        .btn {
-            padding: 12px 30px;
-            background: #00e6b8;
-            color: #000;
-            text-decoration: none;
-            border-radius: 6px;
-            margin: 15px 8px 0;
-            display: inline-block;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+    header p {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
 
-        .btn:hover {
-            background: #00c9a0;
-            transform: scale(1.05);
-        }
+    header span {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
+    .btn {
+      display: inline-block;
+      margin: 18px 8px 0;
+      padding: 12px 30px;
+      background: #00e6b8;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.2rem;
-            color: #203a43;
-        }
+    .btn:hover {
+      background: #00caa2;
+      transform: scale(1.05);
+    }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+    /* SECTION */
+    section {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 20px;
+    }
 
-        .service-box {
-            padding: 25px;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
+    h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 45px;
+      color: #203a43;
+    }
 
-        .service-box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-        }
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
 
-        .service-box h3 {
-            margin-bottom: 12px;
-            color: #2c5364;
-            font-size: 1.3rem;
-        }
+    .service-box {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
 
-        .about {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            font-size: 1.1rem;
-            color: #444;
-        }
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+    }
 
-        form {
-            max-width: 550px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    .service-box h3 {
+      font-size: 1.35rem;
+      color: #2c5364;
+      margin-bottom: 12px;
+    }
 
-        input, textarea {
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
+    .service-box p {
+      font-size: 1rem;
+      color: #555;
+    }
 
-        button {
-            padding: 14px;
-            background: #203a43;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-        }
+    /* Desktop alignment fix for 5 services */
+    @media (min-width: 992px) {
+      .services {
+        grid-template-columns: repeat(3, 1fr);
+      }
 
-        button:hover {
-            background: #2c5364;
-        }
+      .service-box:nth-child(4) {
+        grid-column: 2;
+      }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0f2027;
-            color: #fff;
-            font-size: 14px;
-            margin-top: 60px;
-        }
-    </style>
+      .service-box:nth-child(5) {
+        grid-column: 3;
+      }
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* CONTACT */
+    form {
+      max-width: 560px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 14px;
+      background: #203a43;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2c5364;
+    }
+
+    footer {
+      background: #0f2027;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 70px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- HERO -->
 <header>
-    <h1>The Code Craft</h1>
-    <p>We Craft Powerful Digital Experiences</p>
-    <span>Ideas to Solutions</span><br/>
+  <h1>The Code Craft</h1>
+  <p>We Craft Powerful Digital Experiences</p>
+  <span>Ideas to Solutions</span><br>
 
-    <a href="tel:+919074827704" class="btn">Call Now</a>
-    <a href="https://wa.me/919074827704" class="btn">WhatsApp</a>
+  <a href="tel:+919074827704" class="btn">Call Now</a>
+  <a href="#" class="btn">Get Quote</a>
 </header>
 
 <!-- SERVICES -->
 <section>
-    <h2>Our Services</h2>
+  <h2>Our Services</h2>
 
-    <div class="services">
-        <div class="service-box">
-            <h3>WordPress Development</h3>
-            <p>Professional WordPress websites built for performance, security and scalability.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Website Care</h3>
-            <p>Ongoing maintenance, updates and support to keep your website running smoothly.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Speed & Security</h3>
-            <p>Website optimization, performance tuning and strong security solutions.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>CRM & Automation</h3>
-            <p>HubSpot, Zoho, Forms integration to automate leads and workflows.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Custom Websites</h3>
-            <p>Tailor-made websites designed exactly to your business needs.</p>
-        </div>
+  <div class="services">
+    <div class="service-box">
+      <h3>WordPress Development</h3>
+      <p>Custom WordPress websites focused on performance, security and scalability.</p>
     </div>
+
+    <div class="service-box">
+      <h3>Website Care</h3>
+      <p>Ongoing maintenance, updates and monitoring to keep your site running smoothly.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Speed & Security</h3>
+      <p>Fast-loading websites with strong security and optimization best practices.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>CRM & Automation</h3>
+      <p>Lead management and automation using HubSpot, Zoho and smart forms.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Custom Websites</h3>
+      <p>Tailor-made websites designed specifically for your business goals.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section>
-    <h2>About The Code Craft</h2>
-    <div class="about">
-        <p>
-            The Code Craft is a digital solutions team focused on crafting clean, powerful and
-            result-driven digital experiences. We help businesses turn ideas into scalable
-            online solutions with smart technology and thoughtful design.
-        </p>
-    </div>
+  <h2>About The Code Craft</h2>
+  <div class="about">
+    <p>
+      The Code Craft is a digital agency focused on building clean, modern and
+      high-performance web solutions. We help businesses turn ideas into scalable
+      digital products with strong emphasis on speed, usability and quality.
+    </p>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section>
-    <h2>DM for Projects & Support</h2>
+  <h2>Contact Us</h2>
 
-    <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <textarea rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
-    © 2026 The Code Craft • All Rights Reserved
+  © 2026 The Code Craft • All Rights Reserved
 </footer>
 
 <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e){
-        e.preventDefault();
-        alert("Message sent! We’ll connect with you soon.");
-    });
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Message sent successfully. We will contact you soon.");
+  });
 </script>
 
 </body>
