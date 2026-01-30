@@ -1,202 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jainshree DIGITAL | Grow Your Business Online</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jainshree DIGITAL – Website & Marketing Services</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Jainshree DIGITAL provides website development, digital marketing, SEO and branding solutions to grow your business online." />
-  <meta name="keywords" content="Website Development, Digital Marketing, SEO, Branding, Jainshree Digital" />
-  <meta name="author" content="Jainshree DIGITAL" />
+    <!-- Basic SEO -->
+    <meta name="description" content="Jainshree DIGITAL helps businesses grow with websites, branding and digital marketing services.">
+    <meta name="keywords" content="website development, digital marketing, branding, SEO">
+    <meta name="author" content="Jainshree DIGITAL">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Jainshree DIGITAL | Grow Your Business Online" />
-  <meta property="og:description" content="We help businesses grow online with websites, marketing and branding." />
-  <meta property="og:type" content="website" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
 
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Jainshree DIGITAL",
-    "telephone": "+91 90748 27704",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IN"
-    }
-  }
-  </script>
+        header {
+            background: #1a364d;
+            color: #fff;
+            padding: 70px 20px;
+            text-align: center;
+        }
 
-  <style>
-    :root {
-      --primary-bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      --accent: #ff9800;
-      --accent-hover: #ffc107;
-      --footer-bg: #203a43;
-    }
+        header h1 {
+            margin-bottom: 10px;
+        }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { line-height: 1.6; background: #fff; color: #333; }
+        .btn {
+            padding: 10px 22px;
+            background: #ffb200;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+            font-weight: 600;
+        }
 
-    header {
-      background: var(--primary-bg);
-      color: #fff;
-      padding: 90px 20px;
-      text-align: center;
-    }
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
 
-    header h1 { font-size: 2.6rem; margin-bottom: 10px; }
-    header p { font-size: 1.1rem; margin-bottom: 25px; }
+        h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 1.9rem;
+            color: #1a364d;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 26px;
-      background: var(--accent);
-      color: #000;
-      text-decoration: none;
-      border-radius: 30px;
-      margin: 6px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
 
-    .btn:hover { background: var(--accent-hover); transform: scale(1.05); }
+        .service-box {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #fff;
+        }
 
-    section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+        .about {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
 
-    section:nth-child(even) { background: #f9f9f9; }
+        form {
+            max-width: 550px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #203a43;
-      font-size: 2rem;
-    }
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
+        button {
+            padding: 12px;
+            background: #1a364d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover { transform: translateY(-6px); }
-
-    .about {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      font-size: 1.05rem;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 14px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    button {
-      padding: 14px;
-      background: #2c5364;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    button:hover { background: #1b3c4d; }
-
-    footer {
-      background: var(--footer-bg);
-      color: #fff;
-      text-align: center;
-      padding: 22px;
-      font-size: 14px;
-    }
-
-    @media(max-width:600px){
-      header h1 { font-size: 2.1rem; }
-    }
-  </style>
+        footer {
+            text-align: center;
+            padding: 18px;
+            background: #1a364d;
+            color: #fff;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Jainshree DIGITAL</h1>
-  <p>We Help Businesses Grow Online</p>
-  <a href="tel:+919074827704" class="btn">📞 Call Now</a>
-  <a href="https://wa.me/919074827704" class="btn">💬 WhatsApp</a>
-</header>
+    <!-- HERO -->
+    <header>
+        <h1>Jainshree DIGITAL</h1>
+        <p>Helping Businesses Grow with Websites & Marketing</p>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Website Development</h3>
-      <p>Fast, responsive and modern websites that convert visitors into customers.</p>
-    </div>
-    <div class="card">
-      <h3>Digital Marketing</h3>
-      <p>SEO and social media strategies to grow your business online.</p>
-    </div>
-    <div class="card">
-      <h3>Branding</h3>
-      <p>Professional branding solutions to build trust and authority.</p>
-    </div>
-  </div>
-</section>
+        <a href="tel:+919074827704" class="btn">Call Now</a>
+        <a href="https://wa.me/919074827704" class="btn">WhatsApp</a>
+    </header>
 
-<section>
-  <h2>About Us</h2>
-  <div class="about">
-    <p>Jainshree DIGITAL is a results-driven digital agency helping businesses grow with modern websites, marketing and branding solutions.</p>
-  </div>
-</section>
+    <!-- SERVICES -->
+    <section>
+        <h2>Our Services</h2>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <form onsubmit="sendForm(event)">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+        <div class="services">
+            <div class="service-box">
+                <h3>Website Development</h3>
+                <p>Clean, responsive and business-focused websites built to convert visitors.</p>
+            </div>
 
-<footer>
-  © 2026 Jainshree DIGITAL. All Rights Reserved.
-</footer>
+            <div class="service-box">
+                <h3>Digital Marketing</h3>
+                <p>SEO and social media strategies to increase visibility and reach.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Branding</h3>
+                <p>Logo, identity and brand messaging to build trust and recognition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section>
+        <h2>About Us</h2>
+        <div class="about">
+            <p>
+                Jainshree DIGITAL is a small but focused digital team helping businesses establish 
+                a strong online presence. We create simple, effective and result-oriented solutions 
+                that help brands grow without complications.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <textarea rows="4" id="msg" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2026 Jainshree DIGITAL • All Rights Reserved
+    </footer>
+
 
 <script>
-function sendForm(e){
-  e.preventDefault();
-  alert("Thank you! We will contact you soon.");
-}
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message sent! We will get back to you soon.");
+});
 </script>
 
 </body>
