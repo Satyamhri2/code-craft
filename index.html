@@ -86,7 +86,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
-      justify-content: center;
     }
 
     .service-box {
@@ -112,21 +111,6 @@
     .service-box p {
       font-size: 1rem;
       color: #555;
-    }
-
-    /* Desktop alignment fix for 5 services */
-    @media (min-width: 992px) {
-      .services {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .service-box:nth-child(4) {
-        grid-column: 2;
-      }
-
-      .service-box:nth-child(5) {
-        grid-column: 3;
-      }
     }
 
     /* ABOUT */
@@ -230,6 +214,11 @@
     <div class="service-box">
       <h3>Custom Websites</h3>
       <p>Tailor-made websites designed specifically for your business goals.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>UI / UX Design</h3>
+      <p>Clean, modern and user-friendly designs that improve engagement and conversion.</p>
     </div>
   </div>
 </section>
