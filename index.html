@@ -20,34 +20,39 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8f9fb;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
       line-height: 1.6;
     }
 
     /* HERO */
     header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #e0e0e0;
       text-align: center;
       padding: 90px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
     }
 
     header h1 {
       font-size: 3rem;
       font-weight: 800;
       margin-bottom: 10px;
+      color: #00e6b8;
+      text-shadow: 0 0 8px #00e6b8;
     }
 
     header p {
       font-size: 1.4rem;
       margin-bottom: 5px;
+      color: #a0f7d1;
     }
 
     header span {
       font-size: 1.1rem;
-      opacity: 0.9;
+      opacity: 0.8;
+      color: #8de7c9;
     }
 
     .btn {
@@ -55,16 +60,19 @@
       margin: 18px 8px 0;
       padding: 12px 30px;
       background: #00e6b8;
-      color: #000;
+      color: #121212;
       text-decoration: none;
       border-radius: 6px;
       font-weight: 600;
       transition: 0.3s ease;
+      box-shadow: 0 0 10px #00e6b8;
     }
 
     .btn:hover {
       background: #00caa2;
       transform: scale(1.05);
+      box-shadow: 0 0 20px #00caa2;
+      color: #fff;
     }
 
     /* SECTION */
@@ -78,7 +86,8 @@
       text-align: center;
       font-size: 2.3rem;
       margin-bottom: 45px;
-      color: #203a43;
+      color: #00e6b8;
+      text-shadow: 0 0 8px #00e6b8;
     }
 
     /* SERVICES */
@@ -89,28 +98,31 @@
     }
 
     .service-box {
-      background: #fff;
+      background: #1e1e1e;
       padding: 30px 25px;
       border-radius: 12px;
       text-align: center;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 18px rgba(0,230,184,0.2);
       transition: 0.3s ease;
+      border: 1px solid #00e6b8;
     }
 
     .service-box:hover {
       transform: translateY(-8px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+      box-shadow: 0 14px 30px rgba(0,230,184,0.5);
+      background: #272727;
     }
 
     .service-box h3 {
       font-size: 1.35rem;
-      color: #2c5364;
+      color: #00e6b8;
       margin-bottom: 12px;
+      text-shadow: 0 0 6px #00e6b8;
     }
 
     .service-box p {
       font-size: 1rem;
-      color: #555;
+      color: #ccc;
     }
 
     /* ABOUT */
@@ -119,7 +131,13 @@
       margin: auto;
       text-align: center;
       font-size: 1.1rem;
-      color: #444;
+      color: #ccc;
+      line-height: 1.8;
+      border-left: 4px solid #00e6b8;
+      padding-left: 20px;
+      box-shadow: 0 0 15px #00e6b8;
+      background: #1f1f1f;
+      border-radius: 10px;
     }
 
     /* CONTACT */
@@ -135,32 +153,46 @@
       padding: 14px;
       font-size: 1rem;
       border-radius: 6px;
-      border: 1px solid #ccc;
+      border: 1px solid #00e6b8;
+      background: #121212;
+      color: #e0e0e0;
+      box-shadow: inset 0 0 5px #00e6b8;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00caa2;
+      outline: none;
+      box-shadow: 0 0 8px #00caa2;
     }
 
     button {
       padding: 14px;
-      background: #203a43;
-      color: #fff;
+      background: #00e6b8;
+      color: #121212;
       border: none;
       border-radius: 6px;
       font-size: 1.1rem;
       font-weight: 700;
       cursor: pointer;
       transition: 0.3s;
+      box-shadow: 0 0 10px #00e6b8;
     }
 
     button:hover {
-      background: #2c5364;
+      background: #00caa2;
+      color: #fff;
+      box-shadow: 0 0 20px #00caa2;
     }
 
     footer {
-      background: #0f2027;
-      color: #fff;
+      background: #141e30;
+      color: #00e6b8;
       text-align: center;
       padding: 20px;
       font-size: 14px;
       margin-top: 70px;
+      box-shadow: 0 -4px 15px rgba(0,230,184,0.4);
     }
 
     @media (max-width: 600px) {
@@ -183,8 +215,8 @@
   <span>Ideas to Solutions</span><br>
 
   <a href="tel:+919074827704" class="btn">Call Now</a>
-<a href="https://wa.me/919074827704" class="btn" target="_blank">
-  WhatsApp </header>
+  <a href="https://wa.me/919074827704" class="btn" target="_blank">WhatsApp</a>
+</header>
 
 <!-- SERVICES -->
 <section>
@@ -193,12 +225,12 @@
   <div class="services">
     <div class="service-box">
       <h3>WordPress Development</h3>
-      <p>Custom WordPress websites focused on performance, security and scalability.</p>
+      <p>Custom WordPress websites focused on performance, security, and scalability.</p>
     </div>
 
     <div class="service-box">
       <h3>Website Care</h3>
-      <p>Ongoing maintenance, updates and monitoring to keep your site running smoothly.</p>
+      <p>Ongoing maintenance, updates, and monitoring to keep your site running smoothly.</p>
     </div>
 
     <div class="service-box">
@@ -260,4 +292,3 @@
 
 </body>
 </html>
-
