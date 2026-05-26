@@ -1,339 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Trend Craft – Ultimate Aesthetic Store</title>
+<title>The Trend Craft</title>
 
-  <meta name="description" content="Buy the latest trending Korean hair accessories and minimalist anti-tarnish jewelry at best prices." />
-  <meta name="keywords" content="Online shopping, trending accessories, Korean clips, anti-tarnish jewelry" />
-  <meta name="author" content="The Trend Craft" />
-  <meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    /* NAVBAR & CART BADGE */
-    nav {
-      background: #141e30;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
+body{
+background:#fffafc;
+color:#222;
+}
 
-    nav .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #b0b0b0;
-      text-shadow: 0 0 5px #b0b0b0;
-    }
+/* TOP BAR */
 
-    .cart-icon {
-      background: #b0b0b0;
-      color: #121212;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
+.topbar{
+background:#111;
+color:white;
+text-align:center;
+padding:8px;
+font-size:14px;
+}
 
-    /* HERO */
-    header {
-      background: linear-gradient(135deg, #141e30, #243b55);
-      color: #e0e0e0;
-      text-align: center;
-      padding: 70px 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
-    }
+/* NAVBAR */
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-      color: #b0b0b0;
-      text-shadow: 0 0 8px #b0b0b0;
-    }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
 
-    header p {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: #c0c0c0;
-    }
+.logo{
+font-size:28px;
+font-weight:700;
+color:#ff4d8d;
+}
 
-    /* SECTION */
-    section {
-      max-width: 1100px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 2.3rem;
-      margin-bottom: 45px;
-      color: #b0b0b0;
-      text-shadow: 0 0 8px #b0b0b0;
-    }
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
 
-    /* PRODUCTS GRID */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+nav ul li a:hover{
+color:#ff4d8d;
+}
 
-    .product-card {
-      background: #1e1e1e;
-      border-radius: 12px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 8px 18px rgba(176,176,176,0.1);
-      transition: 0.3s ease;
-      border: 1px solid #333;
-      padding-bottom: 20px;
-    }
+.cart{
+background:#ff4d8d;
+padding:10px 18px;
+border-radius:30px;
+color:white;
+font-weight:600;
+}
 
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 14px 30px rgba(176,176,176,0.3);
-      border-color: #b0b0b0;
-    }
+/* HERO */
 
-    .product-img {
-      width: 100%;
-      height: 230px;
-      background: #272727;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
 
-    .product-info {
-      padding: 15px;
-    }
+.hero-content h1{
+font-size:60px;
+color:white;
+margin-bottom:15px;
+}
 
-    .product-title {
-      font-size: 1.2rem;
-      color: #b0b0b0;
-      margin-bottom: 8px;
-    }
+.hero-content p{
+font-size:20px;
+color:#f1f1f1;
+margin-bottom:30px;
+}
 
-    .product-price {
-      font-size: 1.3rem;
-      color: #fff;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+.hero-content button{
+padding:14px 35px;
+border:none;
+background:#ff4d8d;
+color:white;
+font-size:18px;
+border-radius:50px;
+cursor:pointer;
+transition:0.3s;
+}
 
-    .product-price span {
-      font-size: 0.9rem;
-      text-decoration: line-through;
-      color: #777;
-      margin-left: 8px;
-    }
+.hero-content button:hover{
+background:#ff2670;
+transform:scale(1.05);
+}
 
-    .btn-buy {
-      display: block;
-      width: 85%;
-      margin: 8px auto 0;
-      padding: 10px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+/* CATEGORY */
 
-    .btn-add-cart {
-      background: transparent;
-      color: #b0b0b0;
-      border: 1px solid #b0b0b0;
-    }
+.categories{
+padding:70px 7%;
+}
 
-    .btn-add-cart:hover {
-      background: #b0b0b0;
-      color: #121212;
-    }
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:50px;
+}
 
-    .btn-whatsapp {
-      background: #25D366;
-      color: #fff;
-      border: none;
-    }
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 
-    .btn-whatsapp:hover {
-      background: #20ba5a;
-      box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
-    }
+.category-card{
+position:relative;
+overflow:hidden;
+border-radius:18px;
+cursor:pointer;
+}
 
-    /* CONTACT / ORDER INQUIRY */
-    form {
-      max-width: 560px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+.category-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+transition:0.5s;
+}
 
-    input, textarea {
-      padding: 14px;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: 1px solid #b0b0b0;
-      background: #121212;
-      color: #e0e0e0;
-      box-shadow: inset 0 0 5px #b0b0b0;
-    }
+.category-card:hover img{
+transform:scale(1.1);
+}
 
-    button {
-      padding: 14px;
-      background: #b0b0b0;
-      color: #121212;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.category-card h3{
+position:absolute;
+bottom:20px;
+left:20px;
+color:white;
+font-size:24px;
+}
 
-    button:hover {
-      background: #999999;
-      color: #fff;
-    }
+/* PRODUCTS */
 
-    footer {
-      background: #141e30;
-      color: #b0b0b0;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 70px;
-    }
+.products{
+padding:70px 7%;
+background:#fff;
+}
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1.1rem; }
-    }
-  </style>
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.product-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+}
+
+.product-card img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.product-info{
+padding:20px;
+}
+
+.product-info h3{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+color:#ff4d8d;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 22px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff4d8d;
+}
+
+/* FEATURES */
+
+.features{
+padding:80px 7%;
+background:#fff0f5;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.feature-box{
+padding:30px;
+background:white;
+border-radius:20px;
+}
+
+.feature-box h3{
+margin:15px 0;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+padding:80px 7%;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+padding:50px 7%;
+text-align:center;
+margin-top:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:40px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
+<div class="topbar">
+🚚 Free Shipping Above ₹499 | COD Available
+</div>
+
 <nav>
-  <div class="logo">The Trend Craft</div>
-  <div class="cart-icon">🛒 Cart: <span id="cart-count">0</span></div>
+
+<div class="logo">The Trend Craft</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Shop</a></li>
+<li><a href="#">Jewelry</a></li>
+<li><a href="#">Hair Accessories</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<div class="cart">
+🛒 Cart (<span id="cart-count">0</span>)
+</div>
+
 </nav>
 
-<header>
-  <h1>Premium Accessories Store</h1>
-  <p>Elevate your everyday look with Korean Aesthetics & Anti-Tarnish Jewels</p>
-  <span style="color: #25D366; font-weight: bold;">⚡ Order directly on WhatsApp • Fast Shipping</span>
-</header>
+<!-- HERO -->
 
-<section>
-  <h2>Trending Collection</h2>
+<section class="hero">
 
-  <div class="products-grid">
-    
-    <div class="product-card">
-      <img class="product-img" src="https://via.placeholder.com/250x230" alt="Korean Hair Clip Set">
-      <div class="product-info">
-        <h3 class="product-title">Korean Pastel Matte Hair Clips (Set of 4)</h3>
-        <div class="product-price">₹149 <span>₹299</span></div>
-        <button class="btn-buy btn-add-cart" onclick="addToCart()">Add to Cart</button>
-        <button class="btn-buy btn-whatsapp" onclick="orderOnWhatsApp('Korean Pastel Matte Hair Clips', '₹149')">Buy via WhatsApp</button>
-      </div>
-    </div>
+<div class="hero-content">
 
-    <div class="product-card">
-      <img class="product-img" src="https://via.placeholder.com/250x230" alt="Minimalist Pendant">
-      <div class="product-info">
-        <h3 class="product-title">Anti-Tarnish Minimalist Heart Pendant</h3>
-        <div class="product-price">₹249 <span>₹499</span></div>
-        <button class="btn-buy btn-add-cart" onclick="addToCart()">Add to Cart</button>
-        <button class="btn-buy btn-whatsapp" onclick="orderOnWhatsApp('Anti-Tarnish Minimalist Heart Pendant', '₹249')">Buy via WhatsApp</button>
-      </div>
-    </div>
+<h1>Luxury Korean Accessories</h1>
 
-    <div class="product-card">
-      <img class="product-img" src="https://via.placeholder.com/250x230" alt="Satin Scrunchies">
-      <div class="product-info">
-        <h3 class="product-title">Premium Silk Satin Scrunchies (Combo Pack)</h3>
-        <div class="product-price">₹99 <span>₹199</span></div>
-        <button class="btn-buy btn-add-cart" onclick="addToCart()">Add to Cart</button>
-        <button class="btn-buy btn-whatsapp" onclick="orderOnWhatsApp('Premium Silk Satin Scrunchies', '₹99')">Buy via WhatsApp</button>
-      </div>
-    </div>
+<p>Minimal Jewelry • Hair Accessories • Aesthetic Fashion</p>
 
-  </div>
+<button>Shop Now</button>
+
+</div>
+
 </section>
 
-<section>
-  <h2>Have Questions? Ask Us</h2>
-  <form id="contactForm">
-    <input type="text" placeholder="Your Name" required />
-    <input type="text" placeholder="Your Phone Number" required />
-    <textarea rows="3" placeholder="Which product are you looking for?" required></textarea>
-    <button type="submit">Submit Inquiry</button>
-  </form>
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<h2 class="section-title">Shop Categories</h2>
+
+<div class="category-grid">
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=900&auto=format&fit=crop">
+<h3>Rings</h3>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=900&auto=format&fit=crop">
+<h3>Necklaces</h3>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=900&auto=format&fit=crop">
+<h3>Hair Accessories</h3>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=900&auto=format&fit=crop">
+<h3>Bracelets</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+<h2 class="section-title">Trending Products</h2>
+
+<div class="products-grid" id="products-container">
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="feature-box">
+<h2>✨</h2>
+<h3>Premium Quality</h3>
+<p>Luxury finish and anti tarnish jewelry.</p>
+</div>
+
+<div class="feature-box">
+<h2>🚚</h2>
+<h3>Fast Delivery</h3>
+<p>Quick shipping across India.</p>
+</div>
+
+<div class="feature-box">
+<h2>💖</h2>
+<h3>Affordable Luxury</h3>
+<p>Premium products at best prices.</p>
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Amazing quality and beautiful packaging."</p>
+<h4>- Riya</h4>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Exactly same as Instagram aesthetic stores."</p>
+<h4>- Simran</h4>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Hair clips quality is seriously premium."</p>
+<h4>- Neha</h4>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-  © 2026 The Trend Craft • Powered by WhatsApp Checkout
+
+<h2>The Trend Craft</h2>
+
+<p>Luxury Jewelry & Korean Accessories Store</p>
+
+<br>
+
+<p>© 2026 All Rights Reserved</p>
+
 </footer>
 
 <script>
-  let count = 0;
-  
-  // Cart function
-  function addToCart() {
-    count++;
-    document.getElementById("cart-count").innerText = count;
-    alert("Item added to cart successfully!🛒");
-  }
 
-  // WhatsApp Checkout Function
-  function orderOnWhatsApp(productName, price) {
-    // Yahan apna 10 digit ka sahi mobile number daalein (country code 91 ke sath)
-    let myPhoneNumber = "919074827704"; 
-    
-    // Auto message text formatting
-    let message = "Hello! I want to buy your product: " + productName + " worth " + price + ". Please share availability and payment options.";
-    
-    // URL encoding for spacing
-    let whatsappUrl = "https://wa.me/" + myPhoneNumber + "?text=" + encodeURIComponent(message);
-    
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
-  }
+let cartCount = 0;
 
-  // Form Submit
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Thank you! Our team will contact you shortly.");
-  });
+function addToCart(){
+
+cartCount++;
+
+document.getElementById("cart-count").innerText = cartCount;
+
+alert("Product Added To Cart");
+
+}
+
+/* FETCH PRODUCTS API */
+
+fetch('https://fakestoreapi.com/products?limit=8')
+
+.then(res => res.json())
+
+.then(data => {
+
+let container = document.getElementById("products-container");
+
+data.forEach(product => {
+
+container.innerHTML += `
+
+<div class="product-card">
+
+<img src="${product.image}" alt="">
+
+<div class="product-info">
+
+<h3>${product.title.substring(0,40)}</h3>
+
+<div class="price">₹${Math.floor(product.price * 85)}</div>
+
+<a href="#" class="btn" onclick="addToCart()">Add To Cart</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+});
+
 </script>
 
 </body>
