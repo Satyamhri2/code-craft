@@ -4,10 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Trend Craft</title>
+<title>The Trend Craft | Handmade Crafts & Jewelry</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
 
@@ -16,11 +19,13 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#fffafc;
 color:#222;
+overflow-x:hidden;
 }
 
 /* TOP BAR */
@@ -29,8 +34,9 @@ color:#222;
 background:#111;
 color:white;
 text-align:center;
-padding:8px;
+padding:10px;
 font-size:14px;
+font-weight:500;
 }
 
 /* NAVBAR */
@@ -48,14 +54,18 @@ box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:700;
 color:#ff4d8d;
 }
 
+.logo span{
+color:#111;
+}
+
 nav ul{
 display:flex;
-gap:25px;
+gap:28px;
 list-style:none;
 }
 
@@ -70,21 +80,33 @@ nav ul li a:hover{
 color:#ff4d8d;
 }
 
+.nav-icons{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
 .cart{
 background:#ff4d8d;
 padding:10px 18px;
-border-radius:30px;
+border-radius:40px;
 color:white;
 font-weight:600;
+}
+
+.menu-btn{
+display:none;
+font-size:26px;
+cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-height:90vh;
+height:92vh;
 background:
-linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop');
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -94,10 +116,15 @@ text-align:center;
 padding:20px;
 }
 
+.hero-content{
+max-width:850px;
+}
+
 .hero-content h1{
-font-size:60px;
+font-size:70px;
 color:white;
-margin-bottom:15px;
+margin-bottom:18px;
+line-height:1.1;
 }
 
 .hero-content p{
@@ -106,8 +133,8 @@ color:#f1f1f1;
 margin-bottom:30px;
 }
 
-.hero-content button{
-padding:14px 35px;
+.hero-btn{
+padding:15px 35px;
 border:none;
 background:#ff4d8d;
 color:white;
@@ -115,41 +142,46 @@ font-size:18px;
 border-radius:50px;
 cursor:pointer;
 transition:0.3s;
+font-weight:600;
 }
 
-.hero-content button:hover{
+.hero-btn:hover{
 background:#ff2670;
 transform:scale(1.05);
 }
 
-/* CATEGORY */
+/* SECTION */
 
-.categories{
-padding:70px 7%;
+section{
+padding:80px 7%;
 }
 
 .section-title{
 text-align:center;
-font-size:38px;
-margin-bottom:50px;
+font-size:42px;
+margin-bottom:55px;
+color:#111;
 }
+
+/* CATEGORY */
 
 .category-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:28px;
 }
 
 .category-card{
 position:relative;
 overflow:hidden;
-border-radius:18px;
+border-radius:20px;
 cursor:pointer;
+height:340px;
 }
 
 .category-card img{
 width:100%;
-height:320px;
+height:100%;
 object-fit:cover;
 transition:0.5s;
 }
@@ -158,47 +190,67 @@ transition:0.5s;
 transform:scale(1.1);
 }
 
+.category-card::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(transparent,rgba(0,0,0,0.6));
+}
+
 .category-card h3{
 position:absolute;
 bottom:20px;
 left:20px;
 color:white;
-font-size:24px;
+font-size:28px;
+z-index:2;
 }
 
 /* PRODUCTS */
 
 .products{
-padding:70px 7%;
 background:#fff;
 }
 
 .products-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
 gap:30px;
 }
 
 .product-card{
 background:white;
-border-radius:18px;
+border-radius:20px;
 overflow:hidden;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+transition:0.4s;
+position:relative;
 }
 
 .product-card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .product-card img{
 width:100%;
-height:280px;
+height:300px;
 object-fit:cover;
 }
 
+.badge{
+position:absolute;
+top:15px;
+left:15px;
+background:#ff4d8d;
+color:white;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+}
+
 .product-info{
-padding:20px;
+padding:22px;
 }
 
 .product-info h3{
@@ -207,52 +259,75 @@ margin-bottom:10px;
 }
 
 .price{
-font-size:22px;
+font-size:24px;
 font-weight:700;
 color:#ff4d8d;
 margin-bottom:15px;
 }
 
+.old-price{
+text-decoration:line-through;
+font-size:15px;
+color:#777;
+margin-left:8px;
+}
+
 .btn{
 display:inline-block;
-padding:10px 22px;
+padding:12px 24px;
 background:#111;
 color:white;
 text-decoration:none;
-border-radius:30px;
+border-radius:40px;
 transition:0.3s;
+font-weight:500;
+border:none;
+cursor:pointer;
+margin-top:10px;
 }
 
 .btn:hover{
 background:#ff4d8d;
 }
 
+.whatsapp-btn{
+background:#25D366;
+}
+
+.whatsapp-btn:hover{
+background:#1eb85a;
+}
+
 /* FEATURES */
 
 .features{
-padding:80px 7%;
 background:#fff0f5;
+}
+
+.feature-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
-text-align:center;
 }
 
 .feature-box{
-padding:30px;
 background:white;
+padding:35px;
 border-radius:20px;
+text-align:center;
+}
+
+.feature-box i{
+font-size:42px;
+color:#ff4d8d;
+margin-bottom:20px;
 }
 
 .feature-box h3{
-margin:15px 0;
+margin-bottom:12px;
 }
 
 /* TESTIMONIALS */
-
-.testimonials{
-padding:80px 7%;
-}
 
 .testimonial-grid{
 display:grid;
@@ -262,31 +337,115 @@ gap:25px;
 
 .testimonial{
 background:white;
-padding:25px;
-border-radius:18px;
+padding:28px;
+border-radius:20px;
 box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+.testimonial img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+/* INSTAGRAM */
+
+.instagram{
+background:#fff0f5;
+}
+
+.insta-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.insta-grid img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:18px;
+transition:0.3s;
+}
+
+.insta-grid img:hover{
+transform:scale(1.04);
+}
+
+/* CONTACT */
+
+.contact{
+background:#111;
+color:white;
+}
+
+.contact form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.contact input,
+.contact textarea{
+padding:16px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.contact button{
+padding:15px;
+background:#ff4d8d;
+border:none;
+color:white;
+border-radius:40px;
+font-size:18px;
+cursor:pointer;
+font-weight:600;
 }
 
 /* FOOTER */
 
 footer{
-background:#111;
+background:#000;
 color:white;
 padding:50px 7%;
 text-align:center;
-margin-top:50px;
+}
+
+.socials{
+margin:20px 0;
+}
+
+.socials i{
+font-size:22px;
+margin:0 12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.socials i:hover{
+color:#ff4d8d;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:850px){
 
 .hero-content h1{
-font-size:40px;
+font-size:46px;
 }
 
 nav ul{
 display:none;
+}
+
+.menu-btn{
+display:block;
 }
 
 }
@@ -296,24 +455,38 @@ display:none;
 
 <body>
 
+<!-- TOPBAR -->
+
 <div class="topbar">
-🚚 Free Shipping Above ₹499 | COD Available
+🚚 Free Shipping Above ₹499 | COD Available | Handmade With Love ✨
 </div>
+
+<!-- NAVBAR -->
 
 <nav>
 
-<div class="logo">The Trend Craft</div>
+<div class="logo">
+Trend<span>Craft</span>
+</div>
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Shop</a></li>
-<li><a href="#">Jewelry</a></li>
-<li><a href="#">Hair Accessories</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#categories">Categories</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#crafts">Crafts</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
+
+<div class="nav-icons">
 
 <div class="cart">
 🛒 Cart (<span id="cart-count">0</span>)
+</div>
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
 </div>
 
 </nav>
@@ -324,11 +497,16 @@ display:none;
 
 <div class="hero-content">
 
-<h1>Luxury Korean Accessories</h1>
+<h1>Luxury Jewelry & Handmade Crafts</h1>
 
-<p>Minimal Jewelry • Hair Accessories • Aesthetic Fashion</p>
+<p>
+Discover aesthetic accessories, Korean fashion jewelry,
+handmade resin art & unique gift collections.
+</p>
 
-<button>Shop Now</button>
+<button class="hero-btn">
+Shop Collection
+</button>
 
 </div>
 
@@ -336,7 +514,7 @@ display:none;
 
 <!-- CATEGORIES -->
 
-<section class="categories">
+<section id="categories">
 
 <h2 class="section-title">Shop Categories</h2>
 
@@ -368,7 +546,7 @@ display:none;
 
 <!-- PRODUCTS -->
 
-<section class="products">
+<section class="products" id="products">
 
 <h2 class="section-title">Trending Products</h2>
 
@@ -378,73 +556,271 @@ display:none;
 
 </section>
 
+<!-- HANDMADE CRAFTS -->
+
+<section id="crafts">
+
+<h2 class="section-title">Handmade Craft Collection</h2>
+
+<div class="products-grid">
+
+<div class="product-card">
+
+<div class="badge">Handmade</div>
+
+<img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0ff?q=80&w=900&auto=format&fit=crop">
+
+<div class="product-info">
+
+<h3>Resin Name Frame</h3>
+
+<div class="price">
+₹799
+<span class="old-price">₹1499</span>
+</div>
+
+<button class="btn" onclick="addToCart()">
+Add To Cart
+</button>
+
+<button class="btn whatsapp-btn"
+onclick="orderWhatsApp('Resin Name Frame','₹799')">
+WhatsApp Order
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="badge">Best Seller</div>
+
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=900&auto=format&fit=crop">
+
+<div class="product-info">
+
+<h3>Handmade Gift Hamper</h3>
+
+<div class="price">
+₹999
+<span class="old-price">₹1999</span>
+</div>
+
+<button class="btn" onclick="addToCart()">
+Add To Cart
+</button>
+
+<button class="btn whatsapp-btn"
+onclick="orderWhatsApp('Handmade Gift Hamper','₹999')">
+WhatsApp Order
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<div class="badge">Trending</div>
+
+<img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop">
+
+<div class="product-info">
+
+<h3>Custom Candle Set</h3>
+
+<div class="price">
+₹599
+<span class="old-price">₹1199</span>
+</div>
+
+<button class="btn" onclick="addToCart()">
+Add To Cart
+</button>
+
+<button class="btn whatsapp-btn"
+onclick="orderWhatsApp('Custom Candle Set','₹599')">
+WhatsApp Order
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- FEATURES -->
 
 <section class="features">
 
+<h2 class="section-title">Why Choose Us</h2>
+
+<div class="feature-grid">
+
 <div class="feature-box">
-<h2>✨</h2>
+<i class="fa-solid fa-gem"></i>
 <h3>Premium Quality</h3>
-<p>Luxury finish and anti tarnish jewelry.</p>
+<p>Luxury finishing and durable products.</p>
 </div>
 
 <div class="feature-box">
-<h2>🚚</h2>
+<i class="fa-solid fa-truck-fast"></i>
 <h3>Fast Delivery</h3>
-<p>Quick shipping across India.</p>
+<p>Quick shipping across all India.</p>
 </div>
 
 <div class="feature-box">
-<h2>💖</h2>
-<h3>Affordable Luxury</h3>
-<p>Premium products at best prices.</p>
+<i class="fa-solid fa-heart"></i>
+<h3>Made With Love</h3>
+<p>Every handmade item crafted carefully.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-shield-heart"></i>
+<h3>Trusted Store</h3>
+<p>100% customer satisfaction support.</p>
+</div>
+
 </div>
 
 </section>
 
 <!-- TESTIMONIALS -->
 
-<section class="testimonials">
+<section>
 
 <h2 class="section-title">Customer Reviews</h2>
 
 <div class="testimonial-grid">
 
 <div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>"Amazing quality and beautiful packaging."</p>
-<h4>- Riya</h4>
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<h3>Riya Sharma</h3>
+
+<p>
+⭐⭐⭐⭐⭐ <br><br>
+Amazing quality and beautiful packaging.
+Loved the handmade crafts.
+</p>
+
 </div>
 
 <div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>"Exactly same as Instagram aesthetic stores."</p>
-<h4>- Simran</h4>
+
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+<h3>Simran Kaur</h3>
+
+<p>
+⭐⭐⭐⭐⭐ <br><br>
+Exactly same aesthetic products as Instagram stores.
+</p>
+
 </div>
 
 <div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>"Hair clips quality is seriously premium."</p>
-<h4>- Neha</h4>
+
+<img src="https://randomuser.me/api/portraits/women/65.jpg">
+
+<h3>Neha Patel</h3>
+
+<p>
+⭐⭐⭐⭐⭐ <br><br>
+Hair accessories and jewelry quality is seriously premium.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- INSTAGRAM -->
+
+<section class="instagram">
+
+<h2 class="section-title">
+Follow Us On Instagram @thetrendcraft
+</h2>
+
+<div class="insta-grid">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=900&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Phone Number" required>
+
+<textarea rows="5"
+placeholder="Write your message here..."
+required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
 
 <h2>The Trend Craft</h2>
 
-<p>Luxury Jewelry & Korean Accessories Store</p>
+<p>
+Luxury Jewelry • Handmade Crafts • Aesthetic Accessories
+</p>
 
-<br>
+<div class="socials">
 
-<p>© 2026 All Rights Reserved</p>
+<i class="fa-brands fa-instagram"></i>
+
+<i class="fa-brands fa-facebook"></i>
+
+<i class="fa-brands fa-pinterest"></i>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</div>
+
+<p>
+© 2026 The Trend Craft | All Rights Reserved
+</p>
 
 </footer>
 
 <script>
+
+/* CART */
 
 let cartCount = 0;
 
@@ -454,11 +830,45 @@ cartCount++;
 
 document.getElementById("cart-count").innerText = cartCount;
 
-alert("Product Added To Cart");
+alert("Product Added To Cart 🛒");
 
 }
 
-/* FETCH PRODUCTS API */
+/* WHATSAPP ORDER */
+
+function orderWhatsApp(product, price){
+
+let phone = "919074827704";
+
+let text =
+"Hello! I want to order: " +
+product +
+" Price: " +
+price;
+
+let url =
+"https://wa.me/" +
+phone +
+"?text=" +
+encodeURIComponent(text);
+
+window.open(url,'_blank');
+
+}
+
+/* CONTACT FORM */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("Thank You! We will contact you soon 💖");
+
+});
+
+/* FETCH API PRODUCTS */
 
 fetch('https://fakestoreapi.com/products?limit=8')
 
@@ -466,7 +876,8 @@ fetch('https://fakestoreapi.com/products?limit=8')
 
 .then(data => {
 
-let container = document.getElementById("products-container");
+let container =
+document.getElementById("products-container");
 
 data.forEach(product => {
 
@@ -474,15 +885,30 @@ container.innerHTML += `
 
 <div class="product-card">
 
+<div class="badge">Sale</div>
+
 <img src="${product.image}" alt="">
 
 <div class="product-info">
 
 <h3>${product.title.substring(0,40)}</h3>
 
-<div class="price">₹${Math.floor(product.price * 85)}</div>
+<div class="price">
+₹${Math.floor(product.price * 85)}
+<span class="old-price">
+₹${Math.floor(product.price * 120)}
+</span>
+</div>
 
-<a href="#" class="btn" onclick="addToCart()">Add To Cart</a>
+<button class="btn"
+onclick="addToCart()">
+Add To Cart
+</button>
+
+<button class="btn whatsapp-btn"
+onclick="orderWhatsApp('${product.title}','₹${Math.floor(product.price * 85)}')">
+WhatsApp Order
+</button>
 
 </div>
 
